@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#tetris {
+    background: #000;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+}
+
+button {
+    width: 100%;
+    padding: 12px 24px;
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#startBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#startBtn:hover:not(:disabled) {
+    background: #45a049;
+}
+
+#pauseBtn {
+    background: #ff9800;
+    color: white;
+}
+
+#pauseBtn:hover:not(:disabled) {
+    background: #e68900;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.score {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.score p {
+    font-size: 18px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.score span {
+    color: #667eea;
+}
+
+.instructions {
+    margin-top: 20px;
+    text-align: left;
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    color: #667eea;
+}
+
+.instructions p {
+    margin: 5px 0;
+    font-family: monospace;
+    font-size: 14px;
+}
