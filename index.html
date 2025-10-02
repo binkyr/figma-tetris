@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-content">
+            <div class="game-header">
+                <h1>Tetris</h1>
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-start">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Start Game
+                    </button>
+                    <button id="pauseBtn" class="btn btn-secondary" style="display: none;">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                        Pause
+                    </button>
+                    <button id="restartBtn" class="btn btn-outline" style="display: none;">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        Restart
+                    </button>
+                </div>
+            </div>
+
+            <div class="game-main">
+                <div class="board-container">
+                    <canvas id="gameCanvas" width="280" height="560"></canvas>
+                </div>
+
+                <div class="info-panel">
+                    <div class="info-card">
+                        <h3>Next Piece</h3>
+                        <div class="next-piece-container">
+                            <canvas id="nextPieceCanvas" width="100" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="stat">
+                            <div class="stat-label">Score</div>
+                            <div class="stat-value" id="score">0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Lines</div>
+                            <div class="stat-value" id="lines">0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Level</div>
+                            <div class="stat-value" id="level">1</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <span>Move</span>
+                                <span>← →</span>
+                            </div>
+                            <div class="control-item">
+                                <span>Rotate</span>
+                                <span>↑</span>
+                            </div>
+                            <div class="control-item">
+                                <span>Soft Drop</span>
+                                <span>↓</span>
+                            </div>
+                            <div class="control-item">
+                                <span>Hard Drop</span>
+                                <span>Space</span>
+                            </div>
+                            <div class="control-item">
+                                <span>Pause</span>
+                                <span>P</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gameOverCard" class="info-card game-over" style="display: none;">
+                        <div>Game Over!</div>
+                    </div>
+
+                    <div id="pausedCard" class="info-card paused" style="display: none;">
+                        <div>Paused</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
